@@ -1,4 +1,4 @@
-# MASSIVE-PARALLEL LIDAR LOCALIZATION BENCHMARK
+# Massive-Parallel Lidar Localization
 
 2D LiDAR localization benchmark with EKF and Monte Carlo Localization, batched evaluation, publication-style figures, and MP4/GIF demos.
 
