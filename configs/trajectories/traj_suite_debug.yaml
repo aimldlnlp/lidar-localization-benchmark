@@ -1,0 +1,15 @@
+inherit_from: ../base.yaml
+
+trajectory:
+  pattern: explore
+  horizon_s: 20.0
+  num_waypoints: 5
+
+benchmark:
+  seeds: [0]
+  trajectories_per_map: 1
+
+experiment:
+  name: traj_suite_debug
+  notes: generate a single trajectory per map
+

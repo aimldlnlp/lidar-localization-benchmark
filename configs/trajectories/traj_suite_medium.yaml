@@ -1,0 +1,15 @@
+inherit_from: ../base.yaml
+
+trajectory:
+  pattern: loop
+  horizon_s: 40.0
+  num_waypoints: 8
+
+benchmark:
+  seeds: [0, 1, 2]
+  trajectories_per_map: 3
+
+experiment:
+  name: traj_suite_medium
+  notes: medium trajectory generation suite
+

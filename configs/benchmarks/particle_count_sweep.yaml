@@ -1,0 +1,11 @@
+inherit_from: ../base.yaml
+
+ekf:
+  enabled: false
+
+experiment:
+  name: particle_count_sweep
+  sweep_key: mcl.particle_count
+  values: [128, 256, 512, 1024, 2048, 4096]
+  notes: particle count versus accuracy and throughput
+

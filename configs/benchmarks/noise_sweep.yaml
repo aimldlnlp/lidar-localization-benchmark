@@ -1,0 +1,13 @@
+inherit_from: ../base.yaml
+
+benchmark:
+  seeds: [0, 1, 2, 3, 4]
+  maps_per_family: 3
+  trajectories_per_map: 2
+
+experiment:
+  name: noise_sweep
+  sweep_key: lidar.range_noise_std_m
+  values: [0.0, 0.02, 0.05, 0.10]
+  notes: range noise robustness sweep
+

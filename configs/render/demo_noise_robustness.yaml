@@ -1,0 +1,10 @@
+inherit_from: ../base.yaml
+
+render:
+  target_video_name: demo_noise_robustness
+  target_run_dir: outputs/runs/noise_sweep
+
+experiment:
+  name: demo_noise_robustness
+  notes: render noise robustness demo video
+

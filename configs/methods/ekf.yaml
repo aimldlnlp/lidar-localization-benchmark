@@ -1,0 +1,15 @@
+inherit_from: ../base.yaml
+
+ekf:
+  enabled: true
+  sparse_beams: 16
+  process_noise_diag: [0.02, 0.02, 0.015]
+  measurement_noise_std_m: 0.06
+
+mcl:
+  enabled: false
+
+experiment:
+  name: ekf_only
+  notes: EKF baseline configuration
+

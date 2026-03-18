@@ -1,0 +1,7 @@
+inherit_from: smoke.yaml
+device: cuda
+
+experiment:
+  name: gpu_smoke
+  notes: smoke path for CUDA-equipped machines
+

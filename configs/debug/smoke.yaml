@@ -1,0 +1,35 @@
+inherit_from: ../base.yaml
+seed: 7
+device: cpu
+
+map:
+  family: open
+  width_m: 20.0
+  height_m: 20.0
+  obstacle_density: 0.06
+
+trajectory:
+  horizon_s: 4.0
+  num_waypoints: 4
+
+lidar:
+  num_beams: 48
+  max_range_m: 10.0
+
+mcl:
+  particle_count: 64
+  measurement_beams: 12
+
+benchmark:
+  seeds: [0]
+  maps_per_family: 1
+  trajectories_per_map: 1
+  step_limit: 40
+
+render:
+  frame_size: [960, 540]
+  target_video_name: smoke_demo
+
+experiment:
+  name: smoke
+  notes: fast local verification

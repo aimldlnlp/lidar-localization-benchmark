@@ -1,0 +1,14 @@
+inherit_from: ../base.yaml
+
+map:
+  family: open
+  obstacle_density: 0.08
+
+benchmark:
+  seeds: [0]
+  maps_per_family: 1
+
+experiment:
+  name: map_suite_debug
+  notes: generate a single debug map
+

@@ -1,0 +1,14 @@
+inherit_from: ../base.yaml
+
+render:
+  target_video_name: demo_particle_convergence
+  target_run_dir: outputs/runs/noise_sweep_medium
+  strict_run_root: true
+  allow_fallback: false
+  source_experiment: noise_sweep_medium
+  fps: 20
+  frame_size: [1280, 720]
+
+experiment:
+  name: portfolio_demo_particle_convergence
+  notes: render the representative MCL convergence demo

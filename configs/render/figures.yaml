@@ -1,0 +1,9 @@
+inherit_from: ../base.yaml
+
+render:
+  dpi: 200
+
+experiment:
+  name: render_figures
+  notes: render the publication-style figure suite
+

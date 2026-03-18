@@ -1,0 +1,9 @@
+inherit_from: ../base.yaml
+device: cuda
+
+experiment:
+  name: throughput_gpu
+  sweep_key: benchmark.batch_size
+  values: [1, 8, 32, 64]
+  notes: compare CPU and GPU throughput for batched scan simulation
+

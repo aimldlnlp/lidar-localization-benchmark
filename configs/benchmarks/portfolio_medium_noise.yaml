@@ -1,0 +1,40 @@
+inherit_from: ../base.yaml
+device: cuda
+
+map:
+  family: open
+  width_m: 40.0
+  height_m: 40.0
+  resolution_m: 0.05
+  obstacle_density: 0.10
+
+trajectory:
+  pattern: explore
+  dt_s: 0.1
+  horizon_s: 35.0
+  target_speed_mps: 0.7
+  num_waypoints: 6
+
+lidar:
+  num_beams: 180
+  range_noise_std_m: 0.02
+
+ekf:
+  sparse_beams: 16
+
+mcl:
+  particle_count: 1024
+  measurement_beams: 48
+
+benchmark:
+  seeds: [0, 1, 2]
+  maps_per_family: 2
+  trajectories_per_map: 1
+  map_families: [open, office]
+  step_limit: 400
+
+experiment:
+  name: noise_sweep_medium
+  sweep_key: lidar.range_noise_std_m
+  values: [0.0, 0.02, 0.05, 0.10]
+  notes: medium evidence benchmark for localization robustness

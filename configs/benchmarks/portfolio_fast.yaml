@@ -1,0 +1,42 @@
+inherit_from: ../base.yaml
+device: cuda
+
+map:
+  family: office
+  width_m: 24.0
+  height_m: 24.0
+  resolution_m: 0.10
+  obstacle_density: 0.08
+
+trajectory:
+  pattern: explore
+  dt_s: 0.1
+  horizon_s: 15.0
+  target_speed_mps: 0.7
+  num_waypoints: 4
+
+lidar:
+  num_beams: 90
+  max_range_m: 12.0
+  ray_step_m: 0.05
+  range_noise_std_m: 0.02
+
+ekf:
+  sparse_beams: 8
+
+mcl:
+  particle_count: 256
+  measurement_beams: 24
+
+benchmark:
+  seeds: [0, 1]
+  maps_per_family: 1
+  trajectories_per_map: 1
+  map_families: [office, open]
+  step_limit: 160
+
+experiment:
+  name: portfolio_fast
+  sweep_key: lidar.range_noise_std_m
+  values: [0.02, 0.10]
+  notes: fast portfolio benchmark with two map families and two noise levels

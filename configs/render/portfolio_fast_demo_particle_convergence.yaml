@@ -1,0 +1,16 @@
+inherit_from: ../base.yaml
+
+render:
+  target_video_name: demo_particle_convergence
+  target_run_dir: outputs/runs/portfolio_fast
+  strict_run_root: true
+  allow_fallback: false
+  source_experiment: portfolio_fast
+  fps: 15
+  frame_size: [960, 540]
+  frame_stride: 2
+  gif_scale_width: 720
+
+experiment:
+  name: portfolio_fast_demo_particle_convergence
+  notes: render the representative fast portfolio MCL convergence demo

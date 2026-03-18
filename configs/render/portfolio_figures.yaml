@@ -1,0 +1,19 @@
+inherit_from: ../base.yaml
+
+render:
+  dpi: 200
+  target_run_dir: outputs/runs/noise_sweep_medium
+  strict_run_root: true
+  allow_fallback: false
+  source_experiment: noise_sweep_medium
+  figure_names:
+    - fig_localization_overview.png
+    - fig_error_vs_time.png
+    - fig_robustness_noise_sweep.png
+    - fig_error_distribution.png
+    - fig_particle_evolution.png
+    - fig_gpu_scalability.png
+
+experiment:
+  name: portfolio_figures
+  notes: render the evidence-backed portfolio figure suite

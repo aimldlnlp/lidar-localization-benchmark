@@ -1,0 +1,8 @@
+inherit_from: ../base.yaml
+
+experiment:
+  name: map_complexity_sweep
+  sweep_key: map.family
+  values: [open, corridor, room, office, maze_lite]
+  notes: compare localization accuracy across map families
+

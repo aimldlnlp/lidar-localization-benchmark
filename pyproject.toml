@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "massive-lidar-localization-benchmark"
+version = "0.1.0"
+description = "Synthetic 2D LiDAR localization benchmark with EKF, MCL, and GPU-aware batching."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+  { name = "OpenAI Codex" }
+]
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "PyYAML>=6.0",
+  "tqdm>=4.66",
+  "imageio>=2.34",
+  "ffmpeg-python>=0.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+gpu = [
+  "torch>=2.2",
+]
+
+[project.scripts]
+massive-lidar-benchmark = "massive_lidar_benchmark.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]

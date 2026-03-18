@@ -1,0 +1,81 @@
+project_name: MASSIVE-PARALLEL LIDAR LOCALIZATION BENCHMARK
+seed: 42
+device: cpu
+output_root: outputs
+
+map:
+  family: room
+  width_m: 40.0
+  height_m: 40.0
+  resolution_m: 0.05
+  robot_radius_m: 0.20
+  obstacle_density: 0.10
+  wall_thickness_cells: 4
+
+trajectory:
+  pattern: explore
+  dt_s: 0.1
+  horizon_s: 50.0
+  target_speed_mps: 0.7
+  max_turn_rate_rps: 0.8
+  num_waypoints: 8
+
+lidar:
+  num_beams: 180
+  fov_deg: 270.0
+  min_range_m: 0.10
+  max_range_m: 20.0
+  ray_step_m: 0.025
+  range_noise_std_m: 0.02
+  dropout_prob: 0.0
+  outlier_prob: 0.0
+
+ekf:
+  enabled: true
+  sparse_beams: 16
+  process_noise_diag: [0.03, 0.03, 0.02]
+  measurement_noise_std_m: 0.08
+  jacobian_eps: [0.02, 0.02, 0.01]
+
+mcl:
+  enabled: true
+  particle_count: 1024
+  measurement_beams: 64
+  motion_noise_std: [0.04, 0.04, 0.03]
+  resample_ess_ratio: 0.5
+
+benchmark:
+  seeds: [0, 1, 2, 3, 4]
+  maps_per_family: 3
+  trajectories_per_map: 2
+  map_families: []
+  kidnapped_enabled: false
+  step_limit: 500
+  batch_size: 1
+
+throughput:
+  devices: []
+  warmup_iters: 10
+  timed_iters: 50
+
+render:
+  dpi: 180
+  fps: 20
+  frame_size: [1280, 720]
+  frame_stride: 2
+  max_frames: null
+  font_family: DejaVu Serif
+  cleanup_frames: false
+  target_video_name: demo_main_localization
+  target_run_dir: outputs/runs
+  strict_run_root: false
+  allow_fallback: true
+  source_experiment: null
+  figure_names: []
+  gif_scale_width: 960
+
+experiment:
+  name: baseline
+  sweep_key: null
+  values: []
+  notes: baseline experiment

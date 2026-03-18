@@ -1,0 +1,10 @@
+inherit_from: ../base.yaml
+
+benchmark:
+  seeds: [0, 1, 2]
+  maps_per_family: 3
+
+experiment:
+  name: map_suite_medium
+  notes: medium synthetic map suite
+

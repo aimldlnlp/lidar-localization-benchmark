@@ -1,0 +1,17 @@
+inherit_from: ../base.yaml
+
+render:
+  dpi: 200
+  target_run_dir: outputs/runs/portfolio_fast
+  strict_run_root: true
+  allow_fallback: false
+  source_experiment: portfolio_fast
+  figure_names:
+    - fig_localization_overview.png
+    - fig_error_vs_time.png
+    - fig_robustness_noise_sweep.png
+    - fig_particle_evolution.png
+
+experiment:
+  name: portfolio_fast_figures
+  notes: render the fast portfolio figure suite

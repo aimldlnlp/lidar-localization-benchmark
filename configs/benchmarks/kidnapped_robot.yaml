@@ -1,0 +1,12 @@
+inherit_from: ../base.yaml
+
+benchmark:
+  kidnapped_enabled: true
+  seeds: [0, 1, 2, 3, 4]
+
+experiment:
+  name: kidnapped_robot
+  sweep_key: benchmark.kidnapped_enabled
+  values: [true]
+  notes: teleport the robot mid-episode and evaluate recovery
+

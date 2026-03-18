@@ -1,0 +1,42 @@
+inherit_from: ../base.yaml
+device: cuda
+
+map:
+  family: office
+  width_m: 40.0
+  height_m: 40.0
+  resolution_m: 0.05
+  obstacle_density: 0.10
+
+trajectory:
+  pattern: explore
+  dt_s: 0.1
+  horizon_s: 20.0
+  target_speed_mps: 0.7
+  num_waypoints: 5
+
+lidar:
+  num_beams: 180
+
+mcl:
+  particle_count: 1024
+  measurement_beams: 48
+
+benchmark:
+  seeds: [0]
+  maps_per_family: 1
+  trajectories_per_map: 1
+  map_families: [office]
+  step_limit: 120
+  batch_size: 1
+
+throughput:
+  devices: [cuda, cpu]
+  warmup_iters: 10
+  timed_iters: 50
+
+experiment:
+  name: throughput_gpu_medium
+  sweep_key: benchmark.batch_size
+  values: [1, 8, 32, 64]
+  notes: medium evidence benchmark for scan and particle-likelihood kernel throughput

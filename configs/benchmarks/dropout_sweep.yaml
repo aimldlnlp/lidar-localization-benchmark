@@ -1,0 +1,8 @@
+inherit_from: ../base.yaml
+
+experiment:
+  name: dropout_sweep
+  sweep_key: lidar.dropout_prob
+  values: [0.0, 0.1, 0.2, 0.3, 0.5]
+  notes: beam dropout robustness sweep
+

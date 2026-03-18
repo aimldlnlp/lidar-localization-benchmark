@@ -1,0 +1,10 @@
+inherit_from: ../base.yaml
+
+render:
+  target_video_name: demo_kidnapped_recovery
+  target_run_dir: outputs/runs/kidnapped_robot
+
+experiment:
+  name: demo_kidnapped_recovery
+  notes: render kidnapped robot recovery demo video
+

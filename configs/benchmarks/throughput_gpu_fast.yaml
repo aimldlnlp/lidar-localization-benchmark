@@ -1,0 +1,44 @@
+inherit_from: ../base.yaml
+device: cuda
+
+map:
+  family: office
+  width_m: 24.0
+  height_m: 24.0
+  resolution_m: 0.10
+  obstacle_density: 0.08
+
+trajectory:
+  pattern: explore
+  dt_s: 0.1
+  horizon_s: 8.0
+  target_speed_mps: 0.7
+  num_waypoints: 3
+
+lidar:
+  num_beams: 90
+  max_range_m: 12.0
+  ray_step_m: 0.05
+
+mcl:
+  particle_count: 256
+  measurement_beams: 24
+
+benchmark:
+  seeds: [0]
+  maps_per_family: 1
+  trajectories_per_map: 1
+  map_families: [office]
+  step_limit: 64
+  batch_size: 1
+
+throughput:
+  devices: [cuda]
+  warmup_iters: 5
+  timed_iters: 20
+
+experiment:
+  name: throughput_gpu_fast
+  sweep_key: benchmark.batch_size
+  values: [1, 8, 32]
+  notes: optional fast CUDA throughput snapshot for portfolio media

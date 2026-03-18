@@ -1,0 +1,11 @@
+inherit_from: ../base.yaml
+
+render:
+  frame_size: [1600, 900]
+  target_video_name: demo_parallel_grid
+  target_run_dir: outputs/runs/throughput_gpu
+
+experiment:
+  name: demo_parallel_grid
+  notes: render parallel grid demo video
+

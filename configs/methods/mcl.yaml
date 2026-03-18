@@ -1,0 +1,15 @@
+inherit_from: ../base.yaml
+
+ekf:
+  enabled: false
+
+mcl:
+  enabled: true
+  particle_count: 1024
+  measurement_beams: 64
+  resample_ess_ratio: 0.5
+
+experiment:
+  name: mcl_only
+  notes: particle filter baseline configuration
+
