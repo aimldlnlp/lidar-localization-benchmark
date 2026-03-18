@@ -2,7 +2,7 @@
 
 2D LiDAR localization benchmark with EKF and Monte Carlo Localization, batched evaluation, publication-style figures, and MP4/GIF demos.
 
-![Localization Overview](outputs/figures/fig_localization_overview.png)
+![Localization Overview](assets/readme/fig_localization_overview.png)
 
 Overview of the benchmark: occupancy map, reference trajectory, localization estimates, scan geometry, and error traces.
 
@@ -26,7 +26,7 @@ Not generated in this run.
 ### Main Localization Demo
 
 <p align="center">
-  <img src="outputs/gifs/demo_main_localization.gif" alt="Main localization demo" width="90%">
+  <img src="assets/readme/demo_main_localization.gif" alt="Main localization demo" width="90%">
 </p>
 
 This demo shows EKF and MCL tracking the same episode with the occupancy map, live LiDAR scan, and translation error evolving in sync.
@@ -34,7 +34,7 @@ This demo shows EKF and MCL tracking the same episode with the occupancy map, li
 ### Noise Robustness Demo
 
 <p align="center">
-  <img src="outputs/gifs/demo_noise_robustness.gif" alt="Noise robustness demo" width="90%">
+  <img src="assets/readme/demo_noise_robustness.gif" alt="Noise robustness demo" width="90%">
 </p>
 
 This comparison shows how the same trajectory looks under lower-noise and higher-noise LiDAR scans, and how the localization error changes with measurement quality.
@@ -42,7 +42,7 @@ This comparison shows how the same trajectory looks under lower-noise and higher
 ### Particle Convergence Demo
 
 <p align="center">
-  <img src="outputs/gifs/demo_particle_convergence.gif" alt="Particle convergence demo" width="90%">
+  <img src="assets/readme/demo_particle_convergence.gif" alt="Particle convergence demo" width="90%">
 </p>
 
 This sequence visualizes particle collapse and pose convergence in Monte Carlo Localization.
@@ -50,13 +50,13 @@ This sequence visualizes particle collapse and pose convergence in Monte Carlo L
 ### Static Figure Gallery
 
 <p align="center">
-  <img src="outputs/figures/fig_robustness_noise_sweep.png" alt="Robustness noise sweep" width="48%">
-  <img src="outputs/figures/fig_error_vs_time.png" alt="Error over time" width="48%">
+  <img src="assets/readme/fig_robustness_noise_sweep.png" alt="Robustness noise sweep" width="48%">
+  <img src="assets/readme/fig_error_vs_time.png" alt="Error over time" width="48%">
 </p>
 
 <p align="center">
-  <img src="outputs/figures/fig_particle_evolution.png" alt="Particle evolution" width="48%">
-  <img src="outputs/figures/fig_localization_overview.png" alt="Localization overview" width="48%">
+  <img src="assets/readme/fig_particle_evolution.png" alt="Particle evolution" width="48%">
+  <img src="assets/readme/fig_localization_overview.png" alt="Localization overview" width="48%">
 </p>
 
 ## What This Project Shows
